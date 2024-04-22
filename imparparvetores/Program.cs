@@ -16,6 +16,9 @@ for (int i = 0; i < 10; i++)
     Console.Write($"Informe o {i + 1}º número: ");
     numbers[i] = int.Parse(Console.ReadLine());
 
+    if (numbers[i] == 0)
+        continue;
+
     if (numbers[i] % 2 == 0)
         quantityOfEvenNumbers++;
     else
@@ -28,6 +31,9 @@ int[] oddNumbers = new int[quantityOfOddNumbers];
 int currentIndex = 0;
 for (int i = 0; i < 10; i++)
 {
+    if (numbers[i] == 0)
+        continue;
+
     if (numbers[i] % 2 == 0)
         evenNumbers[currentIndex++] = numbers[i];
 }
