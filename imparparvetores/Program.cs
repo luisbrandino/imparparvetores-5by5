@@ -8,35 +8,27 @@ D) Guarde os valores impares/pares em um novo vetor sem os valores 0 e imprima;
 
 int[] numbers = new int[10];
 
-int quantityOfEvenNumbers = 0;
-int quantityOfOddNumbers = 0;
-
 for (int i = 0; i < 10; i++)
 {
     Console.Write($"Informe o {i + 1}º número: ");
     numbers[i] = int.Parse(Console.ReadLine());
-
-    if (numbers[i] % 2 == 0)
-        quantityOfEvenNumbers++;
-    else
-        quantityOfOddNumbers++;
 }
 
-int[] evenNumbers = new int[quantityOfEvenNumbers];
-int[] oddNumbers = new int[quantityOfOddNumbers];
+int[] evenNumbers = new int[10];
+int[] oddNumbers = new int[10];
 
-int currentIndex = 0;
+int quantityOfEvenNumbers = 0;
 for (int i = 0; i < 10; i++)
 {
     if (numbers[i] % 2 == 0)
-        evenNumbers[currentIndex++] = numbers[i];
+        evenNumbers[quantityOfEvenNumbers++] = numbers[i];
 }
 
-currentIndex = 0;
+int quantityOfOddNumbers = 0;
 for (int i = 0; i < 10; i++)
 {
     if (numbers[i] % 2 != 0)
-        oddNumbers[currentIndex++] = numbers[i];
+        oddNumbers[quantityOfOddNumbers++] = numbers[i];
 }
 
 Console.WriteLine("\nVetor: ");
